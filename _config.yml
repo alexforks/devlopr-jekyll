@@ -22,6 +22,8 @@ urls:
       url : /contact
 
 
+show_cart: true
+
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png
