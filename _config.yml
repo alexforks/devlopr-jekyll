@@ -22,6 +22,12 @@ urls:
       url : /contact
 
 
+show_cart: true
+show_maker_button: true
+show_donation_button: true
+
+donation_username: sujaykundu
+
 # Edit Author details (For multi authors check _data/authors.yml)
 
 author_logo: profile.png

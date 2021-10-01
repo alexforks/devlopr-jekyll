@@ -96,7 +96,9 @@ layout: default
     <div class="card">
       <h1>Skills</h1>
 
-      {%- include author_skills.html -%}
+      {% for skill in site.author_skills %}
+      <p>{{ skill }}</p>
+      {% endfor %}
     </div>
 
     {% if site.wakatime_username %}
