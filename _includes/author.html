@@ -15,11 +15,7 @@
                         <p class="author_bio">{{author.bio}}</p>
                         <p>Email : {{author.email}}</p>
                         <p>Website : {{author.site}}</p>
-                        <p class="profile-links">
-                            {% for network in author.social %}
-                                <a class="social-link" href="{{ network.url }}" target="_blank"><i class="fab fa-{{ network.title }} fa-fw"></i></a>
-                            {% endfor %}
-                        </p>
+                        {% include author_social.html %}
                 </div>
         </div>
     </div>
