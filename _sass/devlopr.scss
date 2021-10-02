@@ -202,6 +202,30 @@ header {
     padding: 11px;
 }
 
+/* default table and image style for post content */
+.card-body[itemprop=articleBody] {
+    table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+    }
+    th, td {
+        padding: .75rem;
+        vertical-align: top;
+    }
+    th {
+        border-top: 1.5px solid var(--main-text-color);
+        border-bottom: 1.5px solid var(--main-text-color);
+    }
+    td {
+        border-bottom: 0.5px solid var(--main-text-color);
+    }
+    img {
+        width: 100%;
+        border-radius: calc(.25rem - 1px);
+    }
+}
 
 /* bootstrap override */
 .container-fluid {
