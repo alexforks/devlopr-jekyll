@@ -5,7 +5,7 @@
     <p class="post-summary">
       Posted by : {% if page.author %}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name"><a href="{{site.url}}{{site.baseurl}}/blog/authors/{{page.author}}">{{ page.author }}</a></span> </span
+        <span itemprop="name"><a href="{{site.baseurl}}/blog/authors/{{page.author}}">{{ page.author }}</a></span> </span
       >{% endif %} at
       <time datetime="{{ page.date }}" itemprop="datePublished"
         >{{ page.date | date: "%b %-d, %Y" }}</time
@@ -29,20 +29,19 @@
   <div class="card-body" itemprop="articleBody">
     <img
       class="card-img-top"
-      src="{{site.url}}{{site.baseurl}}{{ page.thumbnail }}"
+      src="{{site.baseurl}}{{ page.thumbnail }}"
       alt="{{ post.title }}"
     />
     <br />
     <br />
     {{ content }}
-    <br />
-    {%- include share_page.html -%}
-    <!-- Author box -->
-    {% assign author = site.data.authors[page.author] %}
-      {% if author %}
-      {% include author.html %}
-    {% endif %}
   </div>
+  {%- include share_page.html -%}
+  <!-- Author box -->
+  {% assign author = site.data.authors[page.author] %}
+  {% if author %}
+    {% include author.html %}
+  {% endif %}
   {%- if site.hyvor_talk_website_id -%}
   <div class="comments">
     {%- include hyvor_comments.html -%}
