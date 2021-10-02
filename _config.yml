@@ -232,6 +232,7 @@ defaults:
       permalink: /blog/authors/:slug
 
 # Build settings
+remote_theme: alexforks/devlopr-jekyll
 plugins:
   - jekyll-paginate
   - jekyll-gist
