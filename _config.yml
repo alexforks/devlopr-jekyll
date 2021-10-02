@@ -22,7 +22,6 @@ urls:
       url : /contact
 
 
-show_cart: true
 show_maker_button: true
 show_donation_button: true
 
