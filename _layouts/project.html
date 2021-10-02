@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{% if site.show_author_hobby_project_details == true %}
+<div class="card">
+  <h1 class="card-title">Hobby Projects</h1>
+  <br />
+  {% for project in site.author_project_details %}
+  {% if project.visibility == true and project.reason == "hobby" %}
+  <div class="row">
+    <div class="col-md-4 row-img">
+      <img src="{{site.baseurl}}/assets/img/{{project.project_thumbnail}}" class="project-img" />
+    </div>
+    <div class="col-md-6 row-detail">
+      <h4>{{project.project_title}}</h4>
+      <p>{{project.project_description}}</p>
+      <p><a href="{{project.project_url}}">{{project.project_url}}</a> </p>
+    </div>
+  </div>
+  <br />
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if site.github_username %}
+See more projects at:
+<a href="http://github.com/{{site.github_username}}">
+http://github.com/{{site.github_username}}</a>
+{% endif %}
