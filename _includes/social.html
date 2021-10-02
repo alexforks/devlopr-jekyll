@@ -1,0 +1,6 @@
+<p class="profile-links">
+  {% for network in site.author_social %}
+  {% assign cfg = site.social[network.name] %}
+  <a class="social-link" href="{{ cfg.url | replace: ':username', network.username }}" target="_blank"><i class="fab fa-{{ cfg.icon }} fa-fw"></i></a>
+  {% endfor %}
+</p>
